@@ -1,0 +1,70 @@
+html {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    color: white;
+    background-image: url('green-ghost.png');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: auto 500px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px auto 500px;
+    text-align: left;
+}
+
+.character-name {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 1em auto auto;
+    line-height: 1.2;
+    font-size: large
+}
+
+.dialogue {
+    display: block;
+    width: 50vw;
+    max-width: 500px;
+}
+
+.description {
+    margin-block: 0.5em;
+    margin-inline: 0.5em;
+    font-style: italic;
+    width: 60vw;
+    max-width: 700px;
+
+}
+
+.scene {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2.5em auto 2.5em;
+}
+
+p {
+    margin-block: 0.25em;
+    margin-inline: 0.25em;
+}
+
+.scene:hover {
+    color: rgb(117, 244, 117);
+}
+
+.title {
+    text-align: left;
+    font-weight: bold;
+    font-size: large;
+    text-transform: uppercase;
+}
+
+hr {
+    border: none;
+    border-top: 1px dotted white;
+    width: 60vw;
+    max-width: 700px;
+}
