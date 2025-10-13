@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Design Introduction</title>
+  <style>
+    body {
+      margin-left: auto;
+      margin-right: auto;
+      width: 90%;
+      max-width: 40rem;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    h1 {
+      color: #333;
+      font-size: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    article {
+      margin-bottom: 2rem;
+    }
+
+    ol.instructions {
+      background-color: #f8f8f8;
+      border-left: 4px solid #007acc;
+      padding: 1rem;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: Consolas, monospace;
+    }
+
+    pre {
+      background-color: #f4f4f4;
+      padding: 1rem;
+      overflow-x: auto;
+      border-radius: 6px;
+    }
+
+    @media (min-width: 640px) {
+      html { font-size: 16pt; }
+      .two-columns-example {
+        display: flex;
+        gap: 1rem;
+      }
+      .two-columns-example > * {
+        width: 50%;
+      }
+    }
+
+    @media (max-width: 639px) {
+      html { font-size: 12pt; }
+    }
+  </style>
+</head>
+
+<body>
+  <article>
+    <h1>What is responsive design?</h1>
+    <p><dfn>Responsive Design</dfn> might better be named "Device-Independent Design" or "Flexible-Width Design." It is the term commonly used to describe a web layout that adjusts itself (or "responds") to the available width of the window in which it is being viewed — from small mobile device screens to 4k displays.</p>
+
+    <p>Responsive layout is an expected feature of any modern web design, and is perhaps the biggest single factor that makes designing for screens different than designing for print or other media. The good news is that browser default styles are (for the most part) already responsive. That is, an HTML document with no stylesheet will generally display without complaint on any device's browser, and the only user-interaction required to view the content will be vertical scrolling. (Images are a notable exception to this statement, but one that is easy to remedy with a simple line of CSS: <code>img { max-width: 100%; }</code>)</p>
+
+    <ol class="instructions">
+      <li>Create a linked stylesheet for this document.</li>
+      <li>Add the rule: <code>img { max-width: 100%; }</code>.</li>
+    </ol>
+  </article>
+
+  <article>
+    <h1>The viewport meta-tag</h1>
+    <p>In the early days of the web, designers built fixed-width layouts for a 'lowest common denominator' screen size, usually 960px wide. That quickly became untenable with the advent of smartphones and high-resolution displays. Smaller devices needed a way to handle these 'legacy' pages, and a way to distinguish them from responsive ones. Enter the <dfn>viewport meta tag</dfn>. This tag tells the browser that our page uses responsive layout, and should not apply the browser’s default 'pinch and zoom' feature intended for old fixed-width pages.</p>
+
+    <p>The tag usually looks like this: <code class="tag">meta name="viewport" content="width=device-width, initial-scale=1.0"</code>. It belongs in the head of the document and is <strong><em>critical</em></strong> to proper rendering of your page on a mobile device.</p>
+
+    <ol class="instructions">
+      <li>Add the viewport meta tag to this document, in the head, where indicated.</li>
+    </ol>
+  </article>
+
+  <article>
+    <h1>Testing responsive behavior</h1>
+    <p>Use Chrome DevTools to emulate different devices and test how your page reflows. The “Toggle Device Toolbar” button lets you simulate phones, tablets, or any custom width.</p>
+    <img src="https://wudesign.me/resources/basic-layout/images/toggle-device-toolbar.png" alt="Chrome toggle device toolbar button">
+    <p>You can then adjust widths and see how the page responds dynamically.</p>
+    <img src="https://wudesign.me/resources/basic-layout/images/device-toolbar.png" alt="Chrome device toolbar">
+  </article>
+
+  <article>
+    <h1>Manage scale by setting limits, rather than fixed widths</h1>
+    <p>Instead of fixed widths, use relative units and limits like <code>width: 90%</code> and <code>max-width: 40rem</code>. This keeps text comfortable to read across all devices.</p>
+  </article>
+
+  <article>
+    <h1>Responsive images</h1>
+    <p>To ensure images scale correctly, use: <code>img { max-width: 100%; }</code>. This prevents images from overflowing their containers.</p>
+  </article>
+
+  <article>
+    <h1>Media queries</h1>
+    <p>Media queries let you apply different styles depending on screen size. For example:</p>
+    <pre>
+html { font-size: 12pt; }
+
+@media (min-width: 640px) {
+  html { font-size: 16pt; }
+}
+    </pre>
+    <p>When the screen width reaches 640px, the font size increases for better readability.</p>
+
+    <div class="two-columns-example">
+      <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquam rhoncus diam.</div>
+      <div>Donec quis arcu pharetra, imperdiet felis et, consequat ligula. Vestibulum non gravida urna.</div>
+    </div>
+  </article>
+</body>
+</html>
