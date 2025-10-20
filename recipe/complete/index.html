@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe stuff</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 200;
+      }
+
+      html, body {
+        padding: 0px;
+        margin: 0px;
+      }
+        .intro {
+        display: flex;
+        padding: 0;
+        margin: 0;
+      }
+      .introtext {
+        text-align: center;
+        padding: 50px;
+        margin: auto;
+        width: 30%;
+
+        h1 {
+            font-size: 2rem;
+        }
+      }
+      .introimg {
+        display: block;
+        width: 50vw;
+        height: auto;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+      }
+
+      .info {
+        padding: 50px 0; 
+        width: 60%;
+        margin: auto;
+
+        img {
+            width: 500px;
+            margin: 50px;
+        }
+      }
+
+       p.number {
+            margin: 0;
+            display: inline;
+            font-size: 1.5rem;
+        }
+
+.ingredients-list {
+    margin: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 0.75rem; 
+  margin-bottom: 2rem;
+}
+
+
+
+      .note {
+        font-size: 0.8rem;
+        grid-column: 1 / -1;
+      }
+
+      .subtitle {
+        font-size: 1.5rem;
+        margin-inline-start: 0;
+      }
+
+            .subtitle1 {
+        font-size: 1.2rem;
+        display: inline;
+        margin-right: 0.8rem;
+        margin-top: 2rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      a:hover {
+        color: rgb(171, 129, 53);
+      }
+
+svg {
+  transform: rotate(0deg);
+}
+
+svg text {
+  text-anchor: middle;
+  fill: black;
+  font-size: 50px;
+  offset: 50%;
+}
+
+.miso-wrap{
+  position: relative;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.miso{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay{
+  position: absolute;
+  inset: 0;              
+  overflow: visible;     
+  pointer-events: none;  
+}
+
+.overlay text { letter-spacing: 0.8px; }
+
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info li{ 
+  margin: 0.8rem;
+}
+
+h3 {
+  font-weight: 200;
+  font-size: 1.5rem;
+}
+
+
+      </style>      
+</head>
+<body>
+    
+
+<div class="miso-wrap">
+  <img class="miso" src="misosoup.png" alt="Miso soup">
+
+  <svg class="overlay" viewBox="0 0 600 600" aria-hidden="true">
+    <defs>
+      <path id="arc-top"
+            d="M 60,300 A 240,240 0 0 0 540,300" />
+
+      <path id="arc-bottom"
+            d="M 540,300 A 240,240 0 0 0 60,300" />
+    </defs>
+
+    <text text-anchor="middle" font-family="Noto Sans"  font-size="34">
+      <textPath href="#arc-top" startOffset="50%">
+       The Best Miso Soup Recipe
+      </textPath>
+    </text>
+  </svg>
+</div>
+
+<section class="intro">
+        <div class="introtext">
+    <p>This is how to make miso soup, a traditional Japanese soup made from fermented soybean paste (or miso). <br><br> Sooooo umami-rich, warm, and comforting.
+    </p>
+      <a href="https://cooking.nytimes.com/recipes/1023468-miso-soup">By NYT Cooking</a>
+
+
+    </section>
+
+    <section class="info">
+        <h3>Recipe Information</h3>
+        <hr>
+    <ul>
+<li><p class="subtitle1">Yield</p> 4 servings</li>
+    <li>
+      <p class="subtitle1">Cook Time</p>
+      <ul>
+        <li>Soup base preparation - 30 minutes to cook</li>
+        <li>Wakame (seaweed) preparation - 15 minutes to soak</li>
+        <li>Soup assembly: 5 minutes</li>
+        <li>Total time: 50 minutes</li>
+      </ul>
+    </li>
+    <li>
+      <p class="subtitle1">Allergens</p>
+      <ul>
+        <li>Fish (bonito flakes) <em>*can be omitted</em></li>
+        <li>Soy (miso, tofu)</li>
+        <li>* Vegan/vegetarian friendly</li>
+      </ul>
+    </li>
+    <li>
+      <p class="subtitle1">Difficulty</p> easy
+    </li>
+    <li>
+      <p class="subtitle1">Equipment Needed</p> medium pot, 1-2 small bowls, ladle, spoon
+    </li>
+    </ul>
+    </section>
+
+<section class="info">
+    <h3>Ingredients</h3>
+    <hr>
+      <p class="subtitle"><em>Dashi (soup base):</em></p>
+    <div class="ingredients-list">
+        <div><p class="number">5</p> inch square kombu (dried kelp)</div>
+                <div><p class="number">2</p> cups loosely packed katsuobushi (bonito flakes)</div>
+                        <div><p class="number">1</p> tablespoon sake</div>
+        <div><p class="number">1</p> tablespoon mirin</div>
+      </div>
+
+      <p class="subtitle"><em>Toppings and add-ins:</em></p>
+      <div class="ingredients-list">
+  <div class="ingredient-item"><p class="number">5</p> grams wakame (dried seaweed), crushed (1/4 cup)</div>
+  <div class="ingredient-item"><p class="number">14</p> ounce package silken tofu, drained</div>
+  <div class="ingredient-item with-note"><p class="number">1/4</p> cup miso (red or white: see more), plus more to taste</div>
+    <div class="ingredient-item"><p class="number">1</p> large scallion, thinly sliced</div>
+
+  <p class="note"><em>* miso note: white/shiro miso is made with a higher proportion of rice to soybeans which has a milder sweeter flavor. red/aka miso is made with more soybeans with a bolder more umami-rich taste (and darker color). both are good but have different flavor profiles as a heads up for your soup.</em></p>
+</div>
+    </section>
+
+    <section class="info">
+    <h3>Instructions</h3>
+    <hr>
+      <p class="subtitle"><em>To make dashi</em></p>
+      <ol>
+        <li>make dashi, the soup base:</li>
+        <li>soak kombu in 4 cups cold water for 15 min in a medium pot.</li>
+        <img src="https://www.justonecookbook.com/wp-content/uploads/2019/04/Awase-Dashi-3.jpg">
+        <li>add sake and mirin and bring the pot to a simmer on high heat</li>
+        <li>take pot off of the heat just as water starts to boil, and cover for 15 min</li>
+        <li>when ready to serve:</li>
+        <li>remove kombu from pot. * you can discard the kombu or slice thinly into stricts to add to pasta, soup, stews, and salads. kelp is one of the most nutrient dense seaweeds</li>
+        <li>stir the katsubushi into the broth and cover to steep for 1 min</li>
+        <img src="https://www.justonecookbook.com/wp-content/uploads/2025/07/What-is-Dashi-and-How-to-Make-It-06-Making.jpg">
+        <li>strain into a medium bowl and press the katsubushi to extract all the liquid and discard the flakes</li>
+            <p class="subtitle"><em>To prepare wakame (seaweed)</em></p>
+        <li>while waiting on the dashi, soak wakame in a small bowl of water for 15 minutes or until soft</li>
+        <img src="https://www.japanesecooking101.com/wp-content/uploads/2013/05/DSC012231.jpg">
+        <li>drain wakame and set aside</li>
+      <p class="subtitle"><em>To assemble soup</em></p>
+        <li>put the dashi in the pot and add the drained wakame</li>
+        <li>scoop the tofu into the pot with a spoon or your hand, leaving it in large chunks</li>
+        <img src="https://www.justonecookbook.com/wp-content/uploads/2022/04/Miso-Soup-step-by-step-33.jpg">
+        <li>bring the soup to a boil then remove from heat</li>
+
+        <li>add miso to a small bowl, and ladle some broth over to stir and dissolve the miso</li>
+        <li>add the dissolved miso mixture to the pot and stir gently until incorporated</li>
+        <li>add the scallion and seasonings by taste</li>
+        <img src="https://www.justonecookbook.com/wp-content/uploads/2022/06/Miso-Soup-step-by-step-40.jpg">
+        <li>serve immediately</li>
+    </ol>
+        </section>
+
+       
+
+    <section class="info">  
+    <h3>Storing Information</h3>
+    <ol>
+      <li>
+        refriderate in an airtight container for up to 2-3 days.
+      </li>
+      <li>
+        to preserve the most flavor, store the dashi broth separately from miso paste and other ingredients, and add miso and garnishes after heating up dashi over low heat
+      </li>
+</ol>
+</section>  
+</body>
+</html>
