@@ -1,0 +1,228 @@
+.home {
+    background: url('images/home.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    background: #E8E3C4;
+    color: #B44514;
+}
+
+h1 {
+    font-family: 'Crimson Text', serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 128px;
+    line-height: 91%;
+    letter-spacing: -7.68px;
+    color: #B44514;
+}
+
+#home-text {
+background: #E8E3C4;
+width: 600px;
+min-height: 650px;
+margin-left: 120px;
+color: #B44514;
+
+}
+
+#home-title {
+    text-align: left;
+    max-width: 510px;
+    padding: 10px 45px;
+}
+
+.home .nav {
+    display: flex;
+    font-size: 20px;
+    margin: 45px;
+    max-width: 600px;
+    justify-content: space-between;
+}
+
+
+.home .nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.pagenav {
+    display: flex;
+    justify-content: space-evenly;
+    background: #B44514;
+    color: #E8E3C4;
+    border-radius: 0 0 0 45px;
+    max-width: 900px;
+    padding: 30px;
+    margin: 0 0 0 auto;
+    font-size: 18px;
+}
+
+.pagenav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.title {
+    text-align: center;
+    margin-top: 150px;
+}
+
+.about {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 24px;
+}
+
+h1.title {
+    font-size: 96px;
+}
+
+section img {
+    width: 100%;
+    height: auto;
+    border-radius: 45px;
+}
+
+.more-text {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 24px;
+    max-width: 75%;
+    margin: 100px auto;
+}
+
+.more-text > div {
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: nowrap;
+}
+
+.more-text > div p {
+  flex: 1 1 560px;
+  min-width: 380px;
+  max-width: 600px;
+  margin: 0;
+}
+
+.info-img {
+    border-radius: 45px;
+    overflow: hidden;
+    flex: 0 0 420px;
+    max-width: 600px;
+    height: auto;
+}
+
+@media (max-width: 1200px) {
+    .more-text > div {
+        flex-wrap: wrap;              /* allow next line */
+        gap: 100px;
+    }
+
+    .more-text > div p {
+        flex: 1 0 100%;               /* full row for text */
+        min-width: 100%;
+    }
+
+    .info-img {
+        flex: 0 0 auto;               /* let it size itself */
+        width: min(520px, 100%);      /* nice, centered image */
+        margin: 0 auto;               /* center when on its own row */
+    }
+}
+
+    .info-img {
+        flex: 0 0 auto;               /* let it size itself */
+        width: min(550px, 100%);      /* nice, centered image */
+        margin: 0 auto;               /* center when on its own row */
+    }
+
+@media (max-width: 960px) {
+
+    .pagenav {
+    border-radius: 0;
+    }
+}
+
+.long {
+    width: 100%;
+    text-align: center;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.long .more-text { justify-content: center; }             
+
+.long .more-text > div { justify-content: center; }        /* rows are already flex; center children */
+
+.long .more-text > div p {
+  flex: 0 0 auto !important;   
+  min-width: 0 !important;
+  max-width: 60ch !important;  
+  margin: 0 auto !important;   
+  text-align: center;
+}
+
+.long .info-img {
+  flex: 0 0 auto !important;
+  width: min(900px, 100%);
+  margin: 0 auto !important;
+}
+
+.long section img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+@media (max-width: 500px) {
+    h1, h1.title {
+        font-size: 64px;
+    }
+
+    .about {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    overflow-wrap: anywhere;
+    box-sizing: border-box
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .pagenav {
+    font-size: 12px;
+    }
+
+    .pagenav a, .home .nav a {
+        display: block;
+    }
+
+    .home .nav a {
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    .home .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
