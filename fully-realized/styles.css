@@ -1,0 +1,299 @@
+.home {
+    background: url('images/home.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    background: #E8E3C4;
+    color: #B44514;
+}
+
+h1 {
+    font-family: 'Crimson Text', serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 128px;
+    line-height: 91%;
+    letter-spacing: -7.68px;
+    color: #B44514;
+}
+
+#home-text {
+width: 600px;
+max-height: 650px;
+margin-left: 300px;
+
+}
+
+#home-title {
+    text-align: left;
+    max-width: 600px;
+    max-height: 500px;
+    box-sizing: border-box;
+    padding: 10px 40px;
+    background: #E8E3C4;
+    height: auto;
+}
+
+.home .nav {
+    display: flex;
+    font-size: 20px;
+    max-width: 600px;
+    justify-content: space-between;
+    background: #B44514;
+    color: #E8E3C4;
+    padding: 20px 40px;
+    margin-bottom: 45px;
+}
+
+
+.home .nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.pagenav {
+    display: flex;
+    justify-content: space-evenly;
+    background: #B44514;
+    color: #E8E3C4;
+    border-radius: 0; 
+    width: 100%;
+    max-width: none;
+    padding: 30px 30px;
+    margin: 0;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+.pagenav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.pagenav a:hover,
+.home .nav a:hover {
+    text-decoration: underline; /* hover color to indicate clickability */
+}
+
+/* Position the home nav as a full-width header sitting outside the home "square" */
+/* .home .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #B44514;
+    padding: 18px 30px;
+    justify-content: center;
+    z-index: 20;
+} */
+
+/* push the home text down so header doesn't overlap */
+/* #home-text { padding-top: 88px; } */
+
+.title {
+    text-align: center;
+    margin-top: 150px;
+}
+
+.about {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 24px;
+}
+
+/* center paragraph text across site for visual cohesion */
+.about-text p,
+.more-text p,
+.about p {
+    text-align: center;
+}
+
+h1.title {
+    font-size: 96px;
+}
+
+section img {
+    width: 100%;
+    height: auto;
+    border-radius: 45px;
+}
+
+.more-text {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 24px;
+    max-width: 75%;
+    margin: 100px auto;
+}
+
+.more-text > div {
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: nowrap;
+}
+
+.more-text > div p {
+  flex: 1 1 560px;
+  min-width: 380px;
+  max-width: 600px;
+  margin: 0;
+}
+
+.info-img {
+    border-radius: 45px;
+    overflow: hidden;
+    flex: 0 0 420px;
+    max-width: 600px;
+    height: auto;
+}
+
+@media (max-width: 1200px) {
+    .more-text > div {
+        flex-wrap: wrap;              /* allow next line */
+        gap: 100px;
+    }
+
+    .more-text > div p {
+        flex: 1 0 100%;               /* full row for text */
+        min-width: 100%;
+    }
+
+    .info-img {
+        flex: 0 0 auto;               /* let it size itself */
+        width: min(520px, 100%);      /* nice, centered image */
+        margin: 0 auto;               /* center when on its own row */
+    }
+}
+
+    .info-img {
+        flex: 0 0 auto;               /* let it size itself */
+        width: min(550px, 100%);      /* nice, centered image */
+        margin: 0 auto;               /* center when on its own row */
+    }
+
+@media (max-width: 960px) {
+
+    .pagenav {
+    border-radius: 0;
+    }
+}
+
+.long {
+    width: 100%;
+    text-align: center;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.long .more-text { justify-content: center; }             
+
+.long .more-text > div { justify-content: center; }        /* rows are already flex; center children */
+
+.long .more-text > div p {
+  flex: 0 0 auto !important;   
+  min-width: 0 !important;
+  max-width: 60ch !important;  
+  margin: 0 auto !important;   
+  text-align: center;
+}
+
+.long .info-img {
+  flex: 0 0 auto !important;
+  width: min(900px, 100%);
+  margin: 0 auto !important;
+}
+
+.long section img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+@media (max-width: 850px) {
+    #home-text {
+        margin-left: 120px;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+
+    #home-text {
+        margin-left: 80px;
+        margin-top: 20px;
+    }
+    
+    #home-title {
+        height: auto;
+    }
+
+    h1, h1.title {
+        font-size: 96px;
+    }
+
+    .about {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    overflow-wrap: anywhere;
+    box-sizing: border-box
+    }
+
+    p {
+        font-size: 16px; /* slightly bigger on phones */
+    }
+
+    /* .pagenav {
+    font-size: 12px;
+    } */
+
+    /* make nav links stack vertically on very small screens */
+    .pagenav a, .home .nav a {
+        display: block;
+        margin: 5px;
+    }
+
+    /* .home .nav a {
+        margin: 5px;
+        font-size: 14px;
+    } */
+
+    .home .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    /* Stack the main title words on small screens (one word per line) */
+    #home-title h1,
+    h1.title {
+        display: block;
+        max-width: 9ch; /* narrow so words wrap to their own lines */
+        white-space: normal;
+        word-wrap: break-word;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.02;
+    }
+}
+
+p:hover, a:hover{
+    text-decoration: underline;
+}
